@@ -6,7 +6,7 @@ from config import USERS_DB_CONFIG
 connection = None
 cursor = None
 
-def connect_to_db():
+def connectToUsersDB():
     global connection, cursor
     
     try:
@@ -16,7 +16,7 @@ def connect_to_db():
     except OperationalError as e:
         print(f"Connection error to DataBase: {e}")
         return False
-def close_db_connection():
+def closeUsersDB():
     global connection, cursor
     
     if cursor:
@@ -28,8 +28,8 @@ def close_db_connection():
     connection = None
     cursor = None
 
-def check_user_credentials(login, password):
-    connect_to_db()
+def checkUserCredentials(login, password):
+    connectToUsersDB()
     if not connection or connection.closed:
         print("There is no active connection to the database")
         return False
@@ -47,7 +47,4 @@ def check_user_credentials(login, password):
         print(f"Error while checking data: {e}")
         return False
     finally:
-        close_db_connection()
-
-# MongoDB, stores user files
-
+        closeUsersDB()

@@ -1,6 +1,6 @@
 import time as t # Fo use method sleep()
 import os # To clean console
-from workWithDB import check_user_credentials
+from workWithUsersDB import checkUserCredentials
 
 def clearConsole():
     os.system('cls')
@@ -14,6 +14,6 @@ def enterLoginAndPassword():
         print("Incorrect login or password! Try again!"), t.sleep(5), enterLoginAndPassword()
 
 def accountVerification(login, password):
-    return check_user_credentials(login, password)
+    return checkUserCredentials(login, password)
 
 

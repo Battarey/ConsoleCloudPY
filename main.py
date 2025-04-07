@@ -1,3 +1,7 @@
-import functions as f
+# import functions as f
 
-f.enterLoginAndPassword()
+# f.enterLoginAndPassword()
+
+from workWithMongoDB import connectToMongoDB
+
+connectToMongoDB()
