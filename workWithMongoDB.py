@@ -10,11 +10,3 @@ def connectToMongoDB():
         print("✅ Connection successful")
     except Exception as e:
         print(f"❌ Error: {e}")
-
-
-
-# db = client["newdb"]      # Создание/выбор БД
-# collection = db["users"]        # Создание/выбор коллекции
-
-# user = collection.find_one({"users": "first"})
-# print(user)
